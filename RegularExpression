@@ -1,0 +1,29 @@
+// Regular Expressions in C#
+
+using System.Text.RegularExpressions;
+using System;
+
+
+class RegularExpressions 
+{
+    public static void Main(string[] args) {
+        
+        /*
+        string pattern = @"\d"; //  = \d is matching all digits from 0-9
+        Regex regex = new Regex(pattern);
+        Console.WriteLine("Does 2 match? " + regex.IsMatch("2"));
+        Console.WriteLine("Does a match? " + regex.IsMatch("a"));
+        */
+        
+        // Match and MatchCollection
+        
+        string pattern = "(the)";
+        Regex regex = new Regex(pattern);
+        string text = "the quick brown fog jumped over the lazy dog";
+        Match match = regex.Match(text);
+        MatchCollection matches = regex.Matches(text);
+        
+        
+        
+    }
+} 
